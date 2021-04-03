@@ -1,0 +1,161 @@
+/* Main Styles for Stu's colour flipper */
+
+/*
+==============
+Fonts
+==============
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+/*
+==============
+Variables
+==============
+*/
+
+:root {
+  /* colours */
+  --clr-white: #fff;
+  --clr-grey: #f1f5f8;
+  --clr-black: #000;
+  --clr-blue: #0124c0;
+  /* spacing values */
+  --spacing: 0.1rem;
+  /* border radii */
+  --radius: 0.25rem;
+  /* fonts */
+  --ff-primary: "Roboto", sans-serif;
+  /* transitions */
+  --transition: all 0.175s linear;
+}
+/*
+==============
+*/
+
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  background-color: var(--clr-grey);
+  color: var(--clr-blue);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+  letter-spacing: var(--spacing);
+}
+
+@media screen and (min-width: 800px) {
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 0.875rem;
+  }
+}
+
+#navbar {
+  width: 100vw;
+  height: 3rem;
+  color: var(--clr-blue);
+  font-size: 1rem;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-white);
+}
+
+.navContainer {
+  width: 90vw;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*
+==============
+Link states
+==============
+*/
+
+.navLinks {
+  display: flex;
+  list-style-type: none;
+}
+
+.navLinks a:link {
+  color: var(--clr-black);
+  padding: 0 10px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: var(--spacing);
+}
+
+.navLinks a:visited {
+  color: var(--clr-black);
+}
+
+.navLinks a:hover {
+  color: var(--clr-blue);
+}
+
+.navLinks a:active {
+  color: var(--clr-blue);
+  text-decoration: underline;
+}
+main {
+  display: grid;
+  min-height: calc(100vh - 3rem);
+  place-items: center;
+}
+
+.container {
+  text-align: center;
+  letter-spacing: var(--spacing);
+}
+
+.container h2 {
+  text-transform: capitalize;
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  font-family: var(--ff-primary);
+  letter-spacing: var(--spacing);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: var(--transition);
+  padding: 0.75rem 1.25rem;
+  background-color: transparent;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px;
+  border: 1px solid var(--clr-black);
+}
+
+.btn:hover {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
